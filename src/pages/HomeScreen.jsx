@@ -16,7 +16,7 @@ function HomeScreen({ onNav }) {
           </div>
         </div>
         <div className="hero__mark" aria-hidden="true">
-          <img src="./public/assets/logos/navy.png" alt="" />
+          <img src="/loving-life-foundation-web/public/assets/logos/navy.png" alt="" />
         </div>
       </section>
 
@@ -34,7 +34,7 @@ function HomeScreen({ onNav }) {
         </div>
         <div className="programs__grid">
           <article className="program-card" onClick={() => onNav("scholarship")}>
-            <div className="program-card__img" style={{ backgroundImage: "url(./public/assets/photos/scholarship-hero.png)", backgroundPosition: "center 30%" }} />
+            <div className="program-card__img" style={{ backgroundImage: "url(/loving-life-foundation-web/public/assets/photos/scholarship-hero.png)", backgroundPosition: "center 30%" }} />
             <div className="program-card__body">
               <span className="eyebrow">Scholarship</span>
               <h3>Zach Matla Memorial Scholarship</h3>
@@ -43,7 +43,7 @@ function HomeScreen({ onNav }) {
             </div>
           </article>
           <article className="program-card" onClick={() => onNav("tournament")}>
-            <div className="program-card__img" style={{ backgroundImage: "url(./public/assets/photos/golf-tournament-3.jpg)" }} />
+            <div className="program-card__img" style={{ backgroundImage: "url(/loving-life-foundation-web/public/assets/photos/golf-tournament-3.jpg)" }} />
             <div className="program-card__body">
               <span className="eyebrow">Fundraiser</span>
               <h3>The Loving Life Golf Tournament</h3>
@@ -52,7 +52,7 @@ function HomeScreen({ onNav }) {
             </div>
           </article>
           <article className="program-card" onClick={() => onNav("story")}>
-            <div className="program-card__img" style={{ backgroundImage: "url(./public/assets/photos/community-event-1.jpg)", backgroundPosition: "center 20%" }} />
+            <div className="program-card__img" style={{ backgroundImage: "url(/loving-life-foundation-web/public/assets/photos/community-event-1.jpg)", backgroundPosition: "center 20%" }} />
             <div className="program-card__body">
               <span className="eyebrow">Community</span>
               <h3>Events &amp; stories</h3>
