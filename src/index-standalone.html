@@ -330,8 +330,8 @@
               <button className="btn btn--ghost" onClick={() => onNav("story")}>Read Zach's story</button>
             </div>
           </div>
-          <div className="hero__mark" aria-hidden="true" style={{ background: "rgba(26,42,73,0.08)", borderRadius: 12, padding: 40, display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <ZMark size={200} />
+          <div className="hero__mark" aria-hidden="true" style={{ background: "rgba(26,42,73,0.08)", borderRadius: 12, padding: 40, display: "flex", alignItems: "center", justifyContent: "center", backgroundImage: "url('../public/assets/photos/scholarship-hero.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
+            {/* Placeholder */}
           </div>
         </section>
 
@@ -349,7 +349,7 @@
           </div>
           <div className="programs__grid">
             <article className="program-card" onClick={() => onNav("scholarship")}>
-              <div className="program-card__img" style={{ background: "linear-gradient(135deg, #5DD90A, #3E8E41)" }} />
+              <div className="program-card__img" style={{ backgroundImage: "url('../public/assets/photos/scholarship-hero.png')" }} />
               <div className="program-card__body">
                 <span className="eyebrow">Scholarship</span>
                 <h3>Zach Matla Memorial Scholarship</h3>
@@ -358,7 +358,7 @@
               </div>
             </article>
             <article className="program-card" onClick={() => onNav("tournament")}>
-              <div className="program-card__img" style={{ background: "linear-gradient(135deg, #2FA7E0, #1a2a49)" }} />
+              <div className="program-card__img" style={{ backgroundImage: "url('../public/assets/photos/golf-tournament-3.jpg')" }} />
               <div className="program-card__body">
                 <span className="eyebrow">Fundraiser</span>
                 <h3>The Loving Life Golf Tournament</h3>
@@ -367,7 +367,7 @@
               </div>
             </article>
             <article className="program-card" onClick={() => onNav("story")}>
-              <div className="program-card__img" style={{ background: "linear-gradient(135deg, #F26B1F, #E85D12)" }} />
+              <div className="program-card__img" style={{ backgroundImage: "url('../public/assets/photos/community-event-1.jpg')" }} />
               <div className="program-card__body">
                 <span className="eyebrow">Community</span>
                 <h3>Events & stories</h3>
@@ -396,7 +396,7 @@
     return (
       <div className="page">
         <section className="page-hero">
-          <div style={{ background: "linear-gradient(135deg, #5DD90A, #3E8E41)", borderRadius: 10 }} />
+          <img className="page-hero__art" src="../public/assets/photos/scholarship-hero.png" alt="Scholarship" style={{ borderRadius: 10 }} />
           <div className="page-hero__copy">
             <span className="eyebrow">Our signature program</span>
             <h1>The Zach Matla<br />Memorial Scholarship</h1>
@@ -455,7 +455,7 @@
     return (
       <div className="page">
         <section className="tourney-hero">
-          <div style={{ background: "linear-gradient(135deg, #2FA7E0, #1a2a49)", height: 300, borderRadius: 14 }} />
+          <img src="../public/assets/photos/golf-tournament-3.jpg" alt="The Loving Life Foundation Golf Tournament" style={{ width: "100%", maxHeight: 520, objectFit: "cover", borderRadius: 14, display: "block" }} />
         </section>
 
         <section className="tourney-info">
@@ -502,7 +502,10 @@
         <section className="gallery">
           <span className="eyebrow">Last year, on the green</span>
           <div className="gallery__grid">
-            {[1,2,3,4].map(i => <div key={i} style={{ background: "linear-gradient(135deg, #F26B1F, #E85D12)", borderRadius: 10, aspectRatio: "1" }} />)}
+            <img src="../public/assets/photos/community-event-1.jpg" alt="" />
+            <img src="../public/assets/photos/community-event-2.jpg" alt="" />
+            <img src="../public/assets/photos/community-event-3.jpg" alt="" />
+            <img src="../public/assets/photos/golf-tournament-2.jpg" alt="" />
           </div>
         </section>
       </div>
@@ -566,7 +569,7 @@
     return (
       <div className="page story">
         <section className="story-hero">
-          <div style={{ background: "linear-gradient(135deg, #F26B1F, #E85D12)", height: 300, borderRadius: 14 }} />
+          <img src="../public/assets/photos/community-event-1.jpg" alt="" className="story-hero__img" />
           <div className="story-hero__overlay">
             <span className="eyebrow" style={{ fontSize: 16, letterSpacing: "0.2em", color: "#fff", opacity: 1 }}>Zach's story</span>
             <h1>The tagline that started a foundation.</h1>
