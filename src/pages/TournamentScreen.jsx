@@ -2,10 +2,10 @@ function TournamentScreen({ onNav, registered, onRegister, dates = {} }) {
   const [foursome, setFoursome] = React.useState("");
   const [email, setEmail] = React.useState("");
 
-  const edition = dates.tourneyEdition || "8th Annual";
-  const tourneyDate = dates.tourneyDate || "June 6, 2026";
-  const tourneyDay = dates.tourneyDay || "Saturday, June 6, 2026";
-  const tourneyTime = dates.tourneyTime || "9:00 am";
+  const edition = dates.tourneyEdition || "6th Annual";
+  const tourneyDate = dates.tourneyDate || "August 1, 2026";
+  const tourneyDay = dates.tourneyDay || "Saturday, August 1, 2026";
+  const tourneyTime = dates.tourneyTime || "10:00 am";
 
   return (
     <div className="page">
@@ -17,12 +17,12 @@ function TournamentScreen({ onNav, registered, onRegister, dates = {} }) {
         <div className="tourney-info__block">
           <span className="eyebrow">{edition}</span>
           <h1 className="event-title">The Loving Life Foundation<br />Golf Tournament</h1>
-          <p className="lead">{tourneyDay} · Elma Meadows Golf Course · Shotgun start at {tourneyTime}</p>
+          <p className="lead">{tourneyDay} · Shamrock Hills Golf Club, Holland, NY · Shotgun start at {tourneyTime}</p>
         </div>
 
         <div className="tourney-details">
           <div className="detail"><i data-lucide="calendar"></i><div><strong>{tourneyDate}</strong><span>Shotgun · {tourneyTime}</span></div></div>
-          <div className="detail"><i data-lucide="map-pin"></i><div><strong>Elma Meadows</strong><span>Elma, NY</span></div></div>
+          <div className="detail"><i data-lucide="map-pin"></i><div><strong>Shamrock Hills Golf Club</strong><span>Holland, NY</span></div></div>
           <div className="detail"><i data-lucide="users"></i><div><strong>Foursomes</strong><span>$400 / team</span></div></div>
           <div className="detail"><i data-lucide="flag"></i><div><strong>Sponsor a hole</strong><span>From $150</span></div></div>
         </div>

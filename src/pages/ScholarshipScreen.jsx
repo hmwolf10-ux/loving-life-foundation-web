@@ -41,7 +41,7 @@ function ScholarshipScreen({ onNav, dates = {} }) {
           <h2>Kids Zach would have loved.</h2>
         </div>
         <div className="recipients__grid">
-          {["2024 · Maya R.", "2023 · Daniel K.", "2022 · Alana P.", "2021 · Ben S."].map((r) => (
+          {["2026 · Josh Pfeiffer", "2026 · Vincent Vaillancourt"].map((r) => (
             <div key={r} className="recipient-card">
               <div className="recipient-card__thumb"><i data-lucide="graduation-cap"></i></div>
               <div className="recipient-card__meta">{r}</div>
