@@ -12,7 +12,7 @@ function StoryScreen({ onNav }) {
       <article className="story-body">
         <p className="lead">Zach Matla believed, out loud and often, that <em>life is what you make it</em>. He lived like it. And when he was gone, the people who loved him kept saying it to each other — until saying it wasn't enough, and we started doing something with it.</p>
         <p>Zach grew up in Elma and moved through the halls of Iroquois Central like a kid who actually meant the things he said. He had a gift for making people feel seen. He showed up. He stayed a little longer than he had to.</p>
-        <p>The Loving Life Foundation was founded by his family and closest friends in 2018. Since then we've awarded 27 scholarships, hosted eight golf tournaments, and kept telling his story to anyone who'll listen.</p>
+        <p>The Loving Life Foundation was founded by his family and closest friends in 2018. Since then we've awarded 27 scholarships, hosted six golf tournaments, and kept telling his story to anyone who'll listen.</p>
         <blockquote>"He made you feel like you were the most important person in the room. Every room. Every time."</blockquote>
         <p className="quote-attr">— Carla Matla, Zach's mother</p>
         <h3>What comes next</h3>
