@@ -2,7 +2,7 @@ function StoryScreen({ onNav }) {
   return (
     <div className="page story">
       <section className="story-hero">
-        <img src="../public/assets/photos/community-event-1.jpg" alt="" className="story-hero__img" />
+        <img src="./public/assets/photos/community-event-1.jpg" alt="" className="story-hero__img" />
         <div className="story-hero__overlay">
           <span className="eyebrow" style={{ fontSize: 16, letterSpacing: "0.2em", color: "#fff", opacity: 1, textShadow: "0 1px 4px rgba(0,0,0,0.4)" }}>Zach's story</span>
           <h1>The tagline that started a foundation.</h1>
