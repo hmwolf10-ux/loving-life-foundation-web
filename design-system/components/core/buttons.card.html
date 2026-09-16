@@ -1,0 +1,25 @@
+<!-- @dsCard group="Components" viewport="700x210" name="Buttons" subtitle="Primary, accent, donate, ghost, link, disabled" -->
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{margin:0;padding:24px;background:var(--bg)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:start}</style>
+</head><body>
+<div id="root"></div>
+<script type="text/babel">
+const { Button } = window.LovingLifeFoundationDesignSystem_ac4eec;
+function App(){
+  return <div className="grid">
+    <Button variant="primary">Learn more</Button>
+    <Button variant="accent">Apply now</Button>
+    <Button variant="donate">Donate</Button>
+    <Button variant="ghost">Secondary</Button>
+    <Button variant="link">Read the story →</Button>
+    <Button disabled>Closed</Button>
+  </div>;
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script>
+</body></html>

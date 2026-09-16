@@ -1,0 +1,25 @@
+<!-- @dsCard group="Components" viewport="700x260" name="Form fields" subtitle="Labeled inputs, textarea, error state" -->
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{margin:0;padding:24px 28px;background:var(--bg)}.stack{display:flex;flex-direction:column;gap:14px;max-width:480px}.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}</style>
+</head><body>
+<div id="root"></div>
+<script type="text/babel">
+const { Field } = window.LovingLifeFoundationDesignSystem_ac4eec;
+function App(){
+  return <div className="stack">
+    <Field label="Full name" value="Jordan Whitcomb" onChange={()=>{}} />
+    <div className="row2">
+      <Field label="Email" value="jordan@elma.org" onChange={()=>{}} />
+      <Field label="Amount" value="$0" error="Please enter an amount." onChange={()=>{}} />
+    </div>
+    <Field label="A note to the family (optional)" multiline placeholder="Zach believed…" help="Your note will be shared with the Matla family." />
+  </div>;
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script>
+</body></html>

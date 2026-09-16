@@ -1,0 +1,294 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "components/core/**",
+              "components/forms/**",
+              "loving-life-foundation-web/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Oswald|Playfair Display|Inter|JetBrains Mono))/i]",
+        "message": "Font not provided by the design system. Available: Oswald, Playfair Display, Inter, JetBrains Mono."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Badge'] > JSXAttribute > JSXIdentifier[name!=/^(?:color|dot|children|style|key|ref|className|style|children)$/]",
+        "message": "<Badge> doesn't accept that prop. Declared props: color, dot, children, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Badge'] > JSXAttribute[name.name='color'] > Literal[value!=/^(?:navy|orange|green|sky|soft|outline)$/]",
+        "message": "<Badge> color must be one of 'navy' | 'orange' | 'green' | 'sky' | 'soft' | 'outline'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute > JSXIdentifier[name!=/^(?:variant|disabled|children|onClick|style|key|ref|className|style|children)$/]",
+        "message": "<Button> doesn't accept that prop. Declared props: variant, disabled, children, onClick, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:primary|accent|donate|ghost|link)$/]",
+        "message": "<Button> variant must be one of 'primary' | 'accent' | 'donate' | 'ghost' | 'link'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Card'] > JSXAttribute > JSXIdentifier[name!=/^(?:eyebrow|title|children|style|key|ref|className|style|children)$/]",
+        "message": "<Card> doesn't accept that prop. Declared props: eyebrow, title, children, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Field'] > JSXAttribute > JSXIdentifier[name!=/^(?:label|type|multiline|value|onChange|placeholder|error|help|style|key|ref|className|style|children)$/]",
+        "message": "<Field> doesn't accept that prop. Declared props: label, type, multiline, value, onChange, placeholder, error, help, style."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {
+      "Badge": {
+        "replaces": []
+      },
+      "Button": {
+        "replaces": []
+      },
+      "Card": {
+        "replaces": []
+      },
+      "Field": {
+        "replaces": []
+      }
+    },
+    "tokens": [
+      "--accent",
+      "--accent-hover",
+      "--bg",
+      "--bg-alt",
+      "--bg-inverse",
+      "--border",
+      "--border-strong",
+      "--container-lg",
+      "--container-md",
+      "--container-sm",
+      "--container-xl",
+      "--danger",
+      "--divider",
+      "--dur-base",
+      "--dur-fast",
+      "--dur-slow",
+      "--ease-in",
+      "--ease-out",
+      "--ease-soft",
+      "--fg-on-dark",
+      "--fg-on-orange",
+      "--fg1",
+      "--fg2",
+      "--fg3",
+      "--font-body",
+      "--font-condensed",
+      "--font-display",
+      "--font-mono",
+      "--highlight",
+      "--info",
+      "--lh-normal",
+      "--lh-relaxed",
+      "--lh-snug",
+      "--lh-tight",
+      "--ll-black",
+      "--ll-cream",
+      "--ll-green",
+      "--ll-green-grass",
+      "--ll-ink",
+      "--ll-navy",
+      "--ll-navy-deep",
+      "--ll-orange",
+      "--ll-orange-warm",
+      "--ll-paper",
+      "--ll-sand",
+      "--ll-sky",
+      "--ll-stone-100",
+      "--ll-stone-200",
+      "--ll-stone-300",
+      "--ll-stone-50",
+      "--ll-stone-500",
+      "--ll-stone-700",
+      "--primary",
+      "--primary-hover",
+      "--radius-lg",
+      "--radius-md",
+      "--radius-pill",
+      "--radius-sm",
+      "--radius-xl",
+      "--radius-xs",
+      "--shadow-lg",
+      "--shadow-md",
+      "--shadow-photo",
+      "--shadow-ring-accent",
+      "--shadow-sm",
+      "--shadow-xs",
+      "--sp-1",
+      "--sp-10",
+      "--sp-2",
+      "--sp-3",
+      "--sp-4",
+      "--sp-5",
+      "--sp-6",
+      "--sp-7",
+      "--sp-8",
+      "--sp-9",
+      "--success",
+      "--surface",
+      "--surface-raised",
+      "--text-2xl",
+      "--text-3xl",
+      "--text-4xl",
+      "--text-5xl",
+      "--text-base",
+      "--text-hero",
+      "--text-lg",
+      "--text-md",
+      "--text-sm",
+      "--text-xl",
+      "--text-xs",
+      "--tracking-normal",
+      "--tracking-tight",
+      "--tracking-wide",
+      "--tracking-wider",
+      "--warn"
+    ],
+    "tokenKinds": {
+      "--ll-navy": "color",
+      "--ll-navy-deep": "color",
+      "--ll-black": "color",
+      "--ll-ink": "color",
+      "--ll-orange": "color",
+      "--ll-orange-warm": "color",
+      "--ll-green": "color",
+      "--ll-green-grass": "color",
+      "--ll-sky": "color",
+      "--ll-cream": "color",
+      "--ll-paper": "color",
+      "--ll-sand": "color",
+      "--ll-stone-50": "color",
+      "--ll-stone-100": "color",
+      "--ll-stone-200": "color",
+      "--ll-stone-300": "color",
+      "--ll-stone-500": "color",
+      "--ll-stone-700": "color",
+      "--bg": "color",
+      "--bg-alt": "color",
+      "--bg-inverse": "color",
+      "--surface": "color",
+      "--surface-raised": "color",
+      "--fg1": "color",
+      "--fg2": "color",
+      "--fg3": "color",
+      "--fg-on-dark": "color",
+      "--fg-on-orange": "color",
+      "--primary": "color",
+      "--primary-hover": "color",
+      "--accent": "color",
+      "--accent-hover": "color",
+      "--highlight": "color",
+      "--border": "color",
+      "--border-strong": "color",
+      "--divider": "color",
+      "--success": "color",
+      "--info": "color",
+      "--warn": "color",
+      "--danger": "color",
+      "--font-display": "font",
+      "--font-condensed": "font",
+      "--font-body": "font",
+      "--font-mono": "font",
+      "--text-xs": "font",
+      "--text-sm": "font",
+      "--text-base": "font",
+      "--text-md": "font",
+      "--text-lg": "font",
+      "--text-xl": "font",
+      "--text-2xl": "font",
+      "--text-3xl": "font",
+      "--text-4xl": "font",
+      "--text-5xl": "font",
+      "--text-hero": "font",
+      "--lh-tight": "other",
+      "--lh-snug": "other",
+      "--lh-normal": "other",
+      "--lh-relaxed": "other",
+      "--tracking-tight": "font",
+      "--tracking-normal": "font",
+      "--tracking-wide": "font",
+      "--tracking-wider": "font",
+      "--sp-1": "spacing",
+      "--sp-2": "spacing",
+      "--sp-3": "spacing",
+      "--sp-4": "spacing",
+      "--sp-5": "spacing",
+      "--sp-6": "spacing",
+      "--sp-7": "spacing",
+      "--sp-8": "spacing",
+      "--sp-9": "spacing",
+      "--sp-10": "spacing",
+      "--radius-xs": "radius",
+      "--radius-sm": "radius",
+      "--radius-md": "radius",
+      "--radius-lg": "radius",
+      "--radius-xl": "radius",
+      "--radius-pill": "radius",
+      "--shadow-xs": "shadow",
+      "--shadow-sm": "shadow",
+      "--shadow-md": "shadow",
+      "--shadow-lg": "shadow",
+      "--shadow-photo": "shadow",
+      "--shadow-ring-accent": "shadow",
+      "--ease-out": "other",
+      "--ease-in": "other",
+      "--ease-soft": "other",
+      "--dur-fast": "other",
+      "--dur-base": "other",
+      "--dur-slow": "other",
+      "--container-sm": "spacing",
+      "--container-md": "spacing",
+      "--container-lg": "spacing",
+      "--container-xl": "spacing"
+    },
+    "fontFamilies": [
+      "Inter",
+      "JetBrains Mono",
+      "Oswald",
+      "Playfair Display"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+<!-- @dsCard group="Colors" viewport="700x260" name="Primary palette" subtitle="Orange + neon green — the community register" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<style>body{margin:0;padding:24px;background:var(--bg);font-family:var(--font-body)}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.hero .sw{height:150px;border-radius:12px;padding:16px;display:flex;flex-direction:column;justify-content:space-between;position:relative}
+.name{font-family:var(--font-condensed);text-transform:uppercase;letter-spacing:.14em;font-size:13px;font-weight:700}
+.hex{font-family:var(--font-mono);font-size:13px;opacity:.9}
+.badge{position:absolute;top:12px;right:12px;font-family:var(--font-condensed);text-transform:uppercase;letter-spacing:.16em;font-size:10px;background:rgba(0,0,0,.18);padding:4px 8px;border-radius:999px}
+.badge.light{background:rgba(255,255,255,.3)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.sw2{border-radius:8px;padding:10px;height:64px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid var(--border)}
+.on-dark{color:#fff}.on-light{color:#111}
+</style></head><body>
+<div class="hero">
+<div class="sw on-dark" style="background:#F26B1F"><span class="badge light">Primary</span><span class="name">Orange</span><span class="hex">#F26B1F</span></div>
+<div class="sw on-light" style="background:#5DD90A"><span class="badge">Primary</span><span class="name">Neon Green</span><span class="hex">#5DD90A</span></div>
+</div>
+<div class="grid">
+<div class="sw2 on-dark" style="background:#1A2A49"><span class="name">Navy</span><span class="hex">#1A2A49</span></div>
+<div class="sw2 on-dark" style="background:#3E8E41"><span class="name">Grass</span><span class="hex">#3E8E41</span></div>
+<div class="sw2 on-dark" style="background:#2FA7E0"><span class="name">Sky</span><span class="hex">#2FA7E0</span></div>
+<div class="sw2 on-dark" style="background:#111111"><span class="name">Ink</span><span class="hex">#111111</span></div>
+</div>
+</body></html>

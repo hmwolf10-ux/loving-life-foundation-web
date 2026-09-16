@@ -1,0 +1,23 @@
+<!-- @dsCard group="Components" viewport="700x220" name="Cards" subtitle="Content card + photo card" -->
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{margin:0;padding:22px;background:var(--ll-cream)}.row{display:grid;grid-template-columns:1.1fr 1fr;gap:16px}</style>
+</head><body>
+<div id="root"></div>
+<script type="text/babel">
+const { Card, PhotoCard } = window.LovingLifeFoundationDesignSystem_ac4eec;
+function App(){
+  return <div className="row">
+    <Card eyebrow="Scholarship" title="Empowering Future Leaders">
+      <p style={{fontSize:14,lineHeight:1.5,color:'var(--fg2)',margin:0}}>Awarded each spring to a graduating senior from Iroquois Central who embodies Zach's spirit.</p>
+    </Card>
+    <PhotoCard image="../../assets/photos/community-event-1.jpg" caption="2024 · Elma Country Club" />
+  </div>;
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script>
+</body></html>
