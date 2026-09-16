@@ -21,11 +21,11 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg1); fo
 .btn--donate:hover { background: var(--ll-orange-warm); }
 .btn:active { transform: scale(0.97); }
 .eyebrow { font-family: var(--font-condensed); font-weight: 500; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ll-orange); display: inline-block; margin-bottom: 10px; }
-h1, h2, h3, h4 { font-family: var(--font-body); color: var(--ll-navy); letter-spacing: -0.015em; margin: 0 0 10px; }
-h1 { font-size: 48px; font-weight: 800; line-height: 1.05; }
-h2 { font-size: 32px; font-weight: 700; line-height: 1.15; }
-h3 { font-size: 22px; font-weight: 700; line-height: 1.25; }
-h4 { font-size: 18px; font-weight: 700; }
+h1, h2, h3, h4 { color: var(--ll-navy); margin: 0 0 10px; }
+h1 { font-family: var(--font-display); font-size: 48px; font-weight: 600; line-height: 1.05; letter-spacing: -0.02em; }
+h2 { font-family: var(--font-display); font-size: 32px; font-weight: 600; line-height: 1.15; letter-spacing: -0.015em; }
+h3 { font-family: var(--font-body); font-size: 22px; font-weight: 700; line-height: 1.25; letter-spacing: -0.01em; }
+h4 { font-family: var(--font-body); font-size: 18px; font-weight: 700; }
 p { line-height: 1.65; color: var(--fg2); margin: 0 0 14px; }
 .lead { font-size: 20px; line-height: 1.5; color: var(--ll-navy); font-weight: 500; }
 blockquote { margin: 22px 0; border-left: 3px solid var(--ll-orange); padding: 6px 0 6px 22px; font-weight: 500; font-size: 22px; line-height: 1.35; color: var(--ll-navy); }
@@ -128,3 +128,58 @@ main { flex: 1; max-width: var(--container-xl); margin: 0 auto; padding: 56px 40
 .site-footer__cols a { display: block; color: rgba(255,255,255,0.7); text-decoration: none; font-size: 14px; padding: 4px 0; }
 .site-footer__cols a:hover { color: var(--ll-orange); }
 .site-footer__legal { max-width: var(--container-xl); margin: 0 auto; display: flex; justify-content: space-between; padding-top: 20px; font-size: 12px; color: rgba(255,255,255,0.5); }
+@media (max-width: 768px) {
+.site-header { padding: 14px 20px; }
+.site-nav { flex-wrap: wrap; gap: 4px; }
+.site-nav__link { font-size: 12px; padding: 6px 10px; }
+.btn--donate { font-size: 11px; padding: 8px 14px; }
+main { padding: 40px 20px; }
+h1 { font-size: 36px; }
+h2 { font-size: 24px; }
+h3 { font-size: 18px; }
+.hero { grid-template-columns: 1fr; gap: 32px; }
+.hero__title { font-size: 42px; }
+.hero__lede { font-size: 16px; }
+.hero__mark img { max-width: 280px; }
+.stats { grid-template-columns: repeat(2, 1fr); padding: 24px; }
+.programs__grid { grid-template-columns: repeat(2, 1fr); }
+.page-hero { grid-template-columns: 1fr; padding: 24px; }
+.two-col { grid-template-columns: 1fr; }
+.tourney-details { grid-template-columns: repeat(2, 1fr); }
+.register { grid-template-columns: 1fr; }
+.gallery__grid { grid-template-columns: repeat(3, 1fr); }
+.donate { grid-template-columns: 1fr; }
+.site-footer__main { grid-template-columns: 1fr; gap: 24px; }
+.site-footer__cols { grid-template-columns: repeat(2, 1fr); }
+.recipients__grid { grid-template-columns: repeat(2, 1fr); }
+.page { gap: 48px; }
+}
+@media (max-width: 480px) {
+.site-header { padding: 12px 14px; }
+.site-nav { gap: 2px; }
+.site-nav__link { font-size: 11px; padding: 5px 8px; }
+.btn { font-size: 12px; padding: 8px 12px; }
+.btn--donate { font-size: 10px; padding: 6px 10px; }
+main { padding: 28px 14px; }
+h1 { font-size: 28px; }
+h2 { font-size: 20px; }
+h3 { font-size: 16px; }
+.hero__title { font-size: 32px; }
+.hero__lede { font-size: 14px; }
+.hero__mark img { max-width: 200px; }
+.stats { grid-template-columns: 1fr; padding: 16px; }
+.stat__num { font-size: 32px; }
+.stat__label { font-size: 9px; }
+.programs__grid { grid-template-columns: 1fr; }
+.pullquote blockquote { font-size: 24px; }
+.event-title { font-size: 32px; }
+.tourney-info__block .event-title { font-size: 28px; }
+.tourney-details { grid-template-columns: 1fr; }
+.gallery__grid { grid-template-columns: repeat(2, 1fr); }
+.recipients__grid { grid-template-columns: 1fr; }
+.donate__tiers { grid-template-columns: 1fr; }
+.site-footer { padding: 28px 14px 16px; }
+.site-footer__main { gap: 16px; }
+.site-footer__cols { grid-template-columns: 1fr; gap: 16px; }
+.page { gap: 32px; }
+}
