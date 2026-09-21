@@ -35,69 +35,47 @@ The site will be available at `http://localhost:3000`.
 ## Project Structure
 
 ```
+index.html                  # Canonical browser entry point
+server.ps1                  # Repository-relative local static server
 src/
-├── index.html              # Main app entry point; contains DATES constant
-├── components/
-│   ├── SiteHeader.jsx      # Navigation header
-│   └── SiteFooter.jsx      # Footer
-└── pages/
-    ├── HomeScreen.jsx      # Landing page
-    ├── TournamentScreen.jsx # Golf tournament details & registration
-    ├── ScholarshipScreen.jsx # Scholarship program & recipients
-    ├── StoryScreen.jsx     # Foundation story & impact
-    └── DonateScreen.jsx    # Donation section
-
+├── App.jsx                 # React app composition and navigation state
+├── content.js              # Shared event and contact content
+├── components/             # Site header and footer
+├── pages/                  # Home, scholarship, tournament, story, donate
+└── styles/                 # Website styles and design-system imports
+public/assets/              # Website images and logos
 design-system/
-├── tokens/
-│   ├── colors.css          # Brand color tokens
-│   ├── typography.css      # Font & type scale
-│   ├── spacing.css         # Spacing system
-│   └── layout.css          # Layout utilities
-└── README.md               # Design system documentation
-
-config/
-└── (configuration files)
-
-docs/
-└── (generated documentation)
+├── components/             # Reusable brand primitives
+├── guidelines/             # Brand and usage specimens
+└── tokens/                 # CSS custom-property tokens
+docs/                       # Project and design-system documentation
+config/                     # Design-system tooling metadata
 ```
 
-## Key Configuration
+There is one website entry point: the root `index.html`. Application code
+belongs in `src/`; do not add another HTML application shell there.
 
-**DATES constant** (`src/index.html`, line 30)  
-Hardcoded dates that override component defaults across the entire site:
-- Tournament edition, date, time
-- Application deadlines
-- Scholarship year
+## Content Configuration
 
-Update this object to reflect current year information.
+Event dates and contact information live in `src/content.js`. Update that file
+for annual event changes instead of editing page components or HTML.
 
 ## Design System
 
-The site uses a custom design system with CSS tokens defined in `design-system/tokens/`.
-
-**Brand Colors:**
-- Primary Navy: `#1a2a49`
-- Accent Orange: `#F26B1F`
-- Highlight Green: `#5DD90A`
-
-**Typography:**
-- Display: Playfair Display
-- Condensed: Oswald
-- Body: Inter
-- Monospace: JetBrains Mono
-
-See `design-system/README.md` for full token documentation.
+The site uses CSS tokens defined in `design-system/tokens/`. Website styles
+import those tokens through `src/styles/styles.css`. Reusable design-system
+components are maintained under `design-system/components/`.
 
 ## Deployment
 
-The site is deployed to GitHub Pages at:  
-https://hmwolf10-ux.github.io/loving-life-foundation-web
-
-Changes merged to `main` are automatically deployed via GitHub Actions.
+The site is a static application. Publish the root `index.html` and
+`public/assets/` directory together. The included PowerShell server serves the
+repository root so local paths match deployment paths.
 
 ## About the Foundation
 
-The Loving Life Foundation was founded in 2018 to keep Zach Matla's story alive through scholarships and community events. Since then, we've awarded 27 scholarships and hosted six golf tournaments.
+The Loving Life Foundation was founded in 2018 to keep Zach Matla's story alive
+through scholarships and community events. Since then, we've awarded 27
+scholarships and hosted six golf tournaments.
 
-For more information, visit the foundation's website or contact Angela or Marc using the phone numbers above.
+For more information, contact Angela or Marc using the phone numbers above.

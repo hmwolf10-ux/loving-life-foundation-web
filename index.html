@@ -19,6 +19,7 @@
 </head>
 <body>
 <div id="root"></div>
+<script type="text/babel" src="src/content.js"></script>
 <script type="text/babel" src="src/components/SiteHeader.jsx"></script>
 <script type="text/babel" src="src/components/SiteFooter.jsx"></script>
 <script type="text/babel" src="src/pages/HomeScreen.jsx"></script>
@@ -26,50 +27,6 @@
 <script type="text/babel" src="src/pages/TournamentScreen.jsx"></script>
 <script type="text/babel" src="src/pages/DonateScreen.jsx"></script>
 <script type="text/babel" src="src/pages/StoryScreen.jsx"></script>
-<script type="text/babel">
-const DATES = { tourneyEdition: "8th Annual", tourneyDay: "Saturday, June 6, 2026", tourneyDate: "June 6, 2026", tourneyTime: "9:00 am", appsOpen: "Mar 1", appsClose: "Apr 15", notified: "May 20", presented: "Jun 6", schYear: "2026" };
-
-function App() {
-  const [screen, setScreen] = React.useState(() => localStorage.getItem("llf_screen") || "home");
-  const [registered, setRegistered] = React.useState(false);
-  const [donated, setDonated] = React.useState(false);
-
-  React.useEffect(() => { localStorage.setItem("llf_screen", screen); }, [screen]);
-  React.useEffect(() => { if (window.lucide) window.lucide.createIcons(); });
-
-  const onNav = (id) => {
-    if (id === "apply") return setScreen("scholarship");
-    setScreen(id);
-    window.scrollTo({ top: 0, behavior: "instant" });
-    if (id !== "tournament") setRegistered(false);
-    if (id !== "donate") setDonated(false);
-  };
-
-  return (
-    <div className="app">
-      <SiteHeader current={screen} onNav={onNav} />
-      <main>
-        {screen === "home" && <HomeScreen onNav={onNav} />}
-        {screen === "scholarship" && <ScholarshipScreen onNav={onNav} dates={DATES} />}
-        {screen === "tournament" && <TournamentScreen onNav={onNav} registered={registered} onRegister={() => setRegistered(true)} dates={DATES} />}
-        {screen === "story" && <StoryScreen onNav={onNav} />}
-        {screen === "donate" && <DonateScreen onNav={onNav} onDonate={() => setDonated(true)} donated={donated} />}
-        {screen === "contact" && (
-          <div className="page">
-            <div style={{ textAlign: "center", padding: "80px 20px" }}>
-              <span className="eyebrow">Contact</span>
-              <h1>Say hello.</h1>
-              <p className="lead">hello@lovinglife-zachmatla.org · Elma, NY</p>
-            </div>
-          </div>
-        )}
-      </main>
-      <SiteFooter onNav={onNav} />
-    </div>
-  );
-}
-
-ReactDOM.createRoot(document.getElementById("root")).render(<App />);
-</script>
+<script type="text/babel" src="src/App.jsx"></script>
 </body>
 </html>

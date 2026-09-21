@@ -23,13 +23,13 @@ Two emotional registers run through everything:
 | `readme.md` | This document |
 | `styles.css` | Root stylesheet — `@import`s only; link this one file from any consumer |
 | `tokens/` | Custom-property token files: colors, typography, spacing, effects (radii/shadows/motion), layout |
-| `base/elements.css` | Semantic element styles (h1–h4, p, blockquote, links, code) built on the tokens |
-| `assets/logos/` | 14 logo colorway PNGs |
-| `assets/photos/` | Curated generic photography (community events, golf tournament, EMW field, scholarship hero) |
+| `src/styles/elements.css` | Semantic element styles (h1–h4, p, blockquote, links, code) built on the tokens |
+| `public/assets/logos/` | 14 logo colorway PNGs |
+| `public/assets/photos/` | Curated generic photography (community events, golf tournament, EMW field, scholarship hero) |
 | `components/core/` | Button, Badge, Card, PhotoCard |
 | `components/forms/` | Field (input/textarea) |
 | `guidelines/` | Foundation specimen cards (colors, type, spacing, radii, shadows, logo, imagery, tagline, iconography) |
-| `ui_kits/website/` | Click-through recreation of a proposed public website (Home, Scholarship, Tournament, Story, Donate) |
+| `index.html` + `src/` | Click-through public website (Home, Scholarship, Tournament, Story, Donate) |
 | `SKILL.md` | Agent-skill definition, portable to Claude Code |
 
 ## Components
@@ -110,7 +110,7 @@ The foundation's visual language is photography + typography + the Z mark — no
 
 - **Font substitution flagged.** No original type files were provided. Playfair Display, Oswald, and Inter (all Google Fonts) stand in for the foundation's actual poster/scholarship type. Please share TTFs if the foundation has them, and we'll swap.
 - Color hexes are sampled from uploaded logo/photo files, not official print specs — the foundation may have CMYK/Pantone specs that differ slightly.
-- No website, app, or Figma was provided — `ui_kits/website/` is a proposed direction grounded in real brand artifacts, not a copy of a live product.
+- No website, app, or Figma was provided — the site is a proposed direction grounded in real brand artifacts, not a copy of a live product.
 - `--font-mono` (JetBrains Mono, used sparingly for captions/dates) has no bundled font file — it falls back to the system mono stack until a file is supplied.
 - The scholarship hero's cap-and-sapling icon is preserved referentially in one image; if a vector original exists, share it and we'll use it directly instead.
 

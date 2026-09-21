@@ -13,15 +13,16 @@ commit: 7879c7bcf8e9
 ## Screen map
 | Screen | Source File |
 |--------|------------|
-| index.html (website) | loving-life-foundation-web/index.html |
-| Home | loving-life-foundation-web/HomeScreen.jsx |
-| Scholarship | loving-life-foundation-web/ScholarshipScreen.jsx |
-| Tournament | loving-life-foundation-web/TournamentScreen.jsx |
-| Story | loving-life-foundation-web/StoryScreen.jsx |
-| Donate | loving-life-foundation-web/DonateScreen.jsx |
-| Header | loving-life-foundation-web/SiteHeader.jsx |
-| Footer | loving-life-foundation-web/SiteFooter.jsx |
-| Design tokens | tokens/* |
-| Components | components/* |
-| Guidelines | guidelines/* |
-| Assets | assets/* |
+| Website entry | `index.html` |
+| App composition | `src/App.jsx` |
+| Content data | `src/content.js` |
+| Home | `src/pages/HomeScreen.jsx` |
+| Scholarship | `src/pages/ScholarshipScreen.jsx` |
+| Tournament | `src/pages/TournamentScreen.jsx` |
+| Story | `src/pages/StoryScreen.jsx` |
+| Donate | `src/pages/DonateScreen.jsx` |
+| Header / footer | `src/components/*` |
+| Design tokens | `design-system/tokens/*` |
+| Design-system components | `design-system/components/*` |
+| Guidelines | `design-system/guidelines/*` |
+| Assets | `public/assets/*` |

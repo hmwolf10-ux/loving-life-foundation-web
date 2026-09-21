@@ -4,7 +4,7 @@ function SiteFooter({ onNav }) {
     <footer className="site-footer">
       <div className="site-footer__main">
         <div className="site-footer__brand">
-          <img src="/loving-life-foundation-web/public/assets/logos/black-white.png" alt="" className="site-footer__logo" />
+          <img src="public/assets/logos/black-white.png" alt="" className="site-footer__logo" />
           <div className="site-footer__tag">
             <em>"Life is what you make it."</em>
             <span>— Zach Matla</span>

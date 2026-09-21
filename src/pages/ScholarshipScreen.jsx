@@ -7,7 +7,7 @@ function ScholarshipScreen({ onNav, dates = {} }) {
   return (
     <div className="page">
       <section className="page-hero">
-        <img className="page-hero__art" src="/loving-life-foundation-web/public/assets/photos/scholarship-hero.png" alt="" />
+        <img className="page-hero__art" src="public/assets/photos/scholarship-hero.png" alt="" />
         <div className="page-hero__copy">
           <span className="eyebrow">Our signature program</span>
           <h1>The Zach Matla<br />Memorial Scholarship</h1>
