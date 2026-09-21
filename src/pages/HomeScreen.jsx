@@ -43,7 +43,7 @@ function HomeScreen({ onNav }) {
             </div>
           </article>
           <article className="program-card" onClick={() => onNav("tournament")}>
-            <div className="program-card__img" style={{ backgroundImage: "url(public/assets/photos/golf-tournament-3.jpg)" }} />
+            <div className="program-card__img" style={{ backgroundImage: "url(public/assets/photos/golf-tournament-hero.jpg)" }} />
             <div className="program-card__body">
               <span className="eyebrow">Fundraiser</span>
               <h3>The Loving Life Golf Tournament</h3>

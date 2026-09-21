@@ -44,9 +44,12 @@ function ScholarshipScreen({ onNav, dates = {} }) {
           <h2>Students carrying Zach's spirit forward.</h2>
         </div>
         <div className="recipients__grid">
-          {[["2026 · Vincent Vaillancourt", "Vincent Vaillancourt"], ["2026 · Joshua Pfeiffer", "Joshua Pfeiffer"]].map(([r, name]) => (
+          {[
+            ["2026 · Vincent Vaillancourt", "Vincent Vaillancourt", "public/assets/photos/recipient-vincent-vaillancourt.jpg"],
+            ["2026 · Joshua Pfeiffer", "Joshua Pfeiffer", "public/assets/photos/recipient-josh-pfeiffer.jpg"]
+          ].map(([r, name, photo]) => (
             <div key={r} className="recipient-card">
-              <div className="recipient-card__thumb"><i data-lucide="graduation-cap"></i></div>
+              <img className="recipient-card__thumb" src={photo} alt="" />
               <div className="recipient-card__meta">{r}</div>
               <div className="recipient-card__quote">{name} · $1,500 scholarship recipient</div>
             </div>

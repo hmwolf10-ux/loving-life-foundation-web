@@ -11,7 +11,7 @@ function TournamentScreen({ onNav, registered, onRegister, dates = {}, tournamen
   return (
     <div className="page">
       <section className="tourney-hero">
-        <img src="public/assets/photos/golf-tournament-3.jpg" alt="The Loving Life Foundation Golf Tournament" />
+        <img src="public/assets/photos/golf-tournament-hero.jpg" alt="The Loving Life Foundation Golf Tournament" />
       </section>
 
       <section className="tourney-info">
@@ -64,10 +64,10 @@ function TournamentScreen({ onNav, registered, onRegister, dates = {}, tournamen
       <section className="gallery">
         <span className="eyebrow">On the green</span>
         <div className="gallery__grid">
-          <img src="public/assets/photos/community-event-1.jpg" alt="" />
-          <img src="public/assets/photos/community-event-2.jpg" alt="" />
-          <img src="public/assets/photos/community-event-3.jpg" alt="" />
-          <img src="public/assets/photos/golf-tournament-2.jpg" alt="" />
+          <img src="public/assets/photos/golf-tournament-1.jpg" alt="Golf tournament guests on the course" />
+          <img src="public/assets/photos/golf-tournament-2.jpg" alt="Golfers gathered beside a golf cart" />
+          <img src="public/assets/photos/golf-tournament-3.jpg" alt="Golf tournament teams gathered on the green" />
+          <img src="public/assets/photos/golf-tournament-4.jpg" alt="Foundation supporters enjoying the tournament" />
         </div>
       </section>
     </div>
