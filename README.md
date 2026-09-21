@@ -2,14 +2,23 @@
 
 Public website for the Loving Life Foundation of Zach Matla, Inc. A single-page React application featuring information about the foundation's annual golf tournament and scholarship program.
 
+## Live Website
+
+[Open the Loving Life Foundation website](https://hmwolf10-ux.github.io/loving-life-foundation-web/)
+
 ## Overview
 
-**6th Annual Golf Tournament**  
-Saturday, August 1, 2026 · 10:00 AM Shotgun Start  
-Shamrock Hills Golf Club, Holland, NY
+This website is updated every year with the current golf tournament details,
+scholarship application dates, scholarship recipients, and contact information.
+The current year's editable content is stored in `src/content.js`.
+
+**Annual Golf Tournament**  
+The tournament date, start time, location, pricing, and registration details
+change from year to year.
 
 **Scholarship Program**  
-2026 Recipients: Josh Pfeiffer, Vincent Vaillancourt
+Application deadlines, award year, and recipient information change from year to
+year.
 
 **Contact**  
 Angela Terhart · (716) 983-2392  
@@ -57,8 +66,10 @@ belongs in `src/`; do not add another HTML application shell there.
 
 ## Content Configuration
 
-Event dates and contact information live in `src/content.js`. Update that file
-for annual event changes instead of editing page components or HTML.
+Year-specific event dates and contact information live in `src/content.js`.
+Update that file each year instead of editing page components or HTML. When
+recipient information is added to the site, keep it in the same central content
+configuration rather than scattering it across individual pages.
 
 ## Design System
 
