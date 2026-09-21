@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600&display=swap");
 :root{
 /* nearest Google Fonts substitutes — see readme.md Caveats. No original type files were provided. */
 --font-display:"Playfair Display","Cormorant Garamond",Georgia,serif;
---font-condensed:"Oswald","Barlow Condensed","Arial Narrow",sans-serif;
+--font-condensed:var(--font-body);
 --font-body:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
 --font-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
 --text-xs:12px;--text-sm:14px;--text-base:16px;--text-md:18px;--text-lg:20px;--text-xl:24px;--text-2xl:30px;--text-3xl:40px;--text-4xl:54px;--text-5xl:72px;--text-hero:96px;
