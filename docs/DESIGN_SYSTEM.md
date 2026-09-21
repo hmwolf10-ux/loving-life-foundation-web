@@ -54,7 +54,7 @@ No component library (Figma or code) was provided, so this is a from-scratch, br
 **Person.** "We" (the foundation/family/community) + "you" (the reader/donor/volunteer). Never corporate "the organization." First names welcome — "Zach," not "Mr. Matla."
 
 **Casing.**
-- Event headlines & posters → `ALL CAPS CONDENSED` (Oswald) — e.g. `THE LOVING LIFE FOUNDATION GOLF TOURNAMENT`
+- Event headlines & posters → `ALL CAPS` with tracked Inter — e.g. `THE LOVING LIFE FOUNDATION GOLF TOURNAMENT`
 - Section/page titles → `Title Case` in display serif — e.g. `Zach Matla Memorial Scholarship`
 - Body → sentence case
 - The tagline → `LIFE IS WHAT YOU MAKE IT` (all caps, tracked wide — lives on the logo ring)
@@ -72,7 +72,7 @@ No component library (Figma or code) was provided, so this is a from-scratch, br
 
 **Color.** Two palettes, one brand. Memorial: deep navy `#1A2A49`, black `#111`, cream paper `#FBF8F1`, warm stone neutrals — for scholarship, formal letters, anniversaries. Community: orange `#F26B1F` (jersey), neon green `#5DD90A` (tutu), sky blue `#2FA7E0` (tourney flag), grass green `#3E8E41` — for tournament, events, social. Navy + orange anchor both palettes and can appear together (orange as accent on navy). Neon green stays reserved for community moments — a reward, not a default.
 
-**Typography.** Display serif Playfair Display (memorial, scholarship, sincere headlines) · condensed sans Oswald, uppercase (event posters, tournament art, photo overlays) · body sans Inter (running text, UI, captions).
+**Typography.** Display serif Playfair Display (memorial, scholarship, sincere headlines) · body sans Inter (running text, UI, captions, event labels) · JetBrains Mono only for technical token specimens.
 
 **Spacing.** 8px base grid (`--sp-2`=8px) scaling through 12/16/24/32/48/64/96/128. Posters use generous negative space around the logo.
 
@@ -108,7 +108,7 @@ The foundation's visual language is photography + typography + the Z mark — no
 
 ## Caveats
 
-- **Font substitution flagged.** No original type files were provided. Playfair Display, Oswald, and Inter (all Google Fonts) stand in for the foundation's actual poster/scholarship type. Please share TTFs if the foundation has them, and we'll swap.
+- **Font substitution flagged.** No original type files were provided. Playfair Display and Inter (Google Fonts) stand in for the foundation's actual poster/scholarship type. Please share TTFs if the foundation has them, and we'll swap.
 - Color hexes are sampled from uploaded logo/photo files, not official print specs — the foundation may have CMYK/Pantone specs that differ slightly.
 - No website, app, or Figma was provided — the site is a proposed direction grounded in real brand artifacts, not a copy of a live product.
 - `--font-mono` (JetBrains Mono, used sparingly for captions/dates) has no bundled font file — it falls back to the system mono stack until a file is supplied.
