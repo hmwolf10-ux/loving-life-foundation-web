@@ -1,4 +1,4 @@
-function SiteFooter({ onNav }) {
+function SiteFooter({ onNav, currentYear }) {
   const nav = (id) => (e) => { e.preventDefault(); onNav && onNav(id); };
   return (
     <footer className="site-footer">
@@ -30,7 +30,7 @@ function SiteFooter({ onNav }) {
         </div>
       </div>
       <div className="site-footer__legal">
-        <span>© 2026 The Loving Life Foundation of Zach Matla · Elma, NY</span>
+        <span>© {currentYear} The Loving Life Foundation of Zach Matla · Elma, NY</span>
         <span>501(c)(3) nonprofit</span>
       </div>
     </footer>

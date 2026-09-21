@@ -1,11 +1,12 @@
-function TournamentScreen({ onNav, registered, onRegister, dates = {} }) {
+function TournamentScreen({ onNav, registered, onRegister, dates = {}, tournament = {} }) {
   const [foursome, setFoursome] = React.useState("");
   const [email, setEmail] = React.useState("");
 
-  const edition = dates.tourneyEdition || "6th Annual";
-  const tourneyDate = dates.tourneyDate || "August 1, 2026";
-  const tourneyDay = dates.tourneyDay || "Saturday, August 1, 2026";
-  const tourneyTime = dates.tourneyTime || "10:00 am";
+  const edition = dates.tourneyEdition || "Annual";
+  const tourneyDate = dates.tourneyDate || "Date to be announced";
+  const tourneyDay = dates.tourneyDay || "Date to be announced";
+  const tourneyTime = dates.tourneyTime || "Time to be announced";
+  const isCompleted = tournament.status === "completed";
 
   return (
     <div className="page">
@@ -17,23 +18,29 @@ function TournamentScreen({ onNav, registered, onRegister, dates = {} }) {
         <div className="tourney-info__block">
           <span className="eyebrow">{edition}</span>
           <h1 className="event-title">The Loving Life Foundation<br />Golf Tournament</h1>
-          <p className="lead">{tourneyDay} · Shamrock Hills Golf Club, Holland, NY · Shotgun start at {tourneyTime}</p>
+          <p className="lead">{tourneyDay} · {tournament.venue || "Venue to be announced"}, {tournament.location || "Location to be announced"} · Shotgun start at {tourneyTime}</p>
         </div>
 
         <div className="tourney-details">
           <div className="detail"><i data-lucide="calendar"></i><div><strong>{tourneyDate}</strong><span>Shotgun · {tourneyTime}</span></div></div>
-          <div className="detail"><i data-lucide="map-pin"></i><div><strong>Shamrock Hills Golf Club</strong><span>Holland, NY</span></div></div>
-          <div className="detail"><i data-lucide="users"></i><div><strong>Foursomes</strong><span>$400 / team</span></div></div>
-          <div className="detail"><i data-lucide="flag"></i><div><strong>Sponsor a hole</strong><span>From $150</span></div></div>
+          <div className="detail"><i data-lucide="map-pin"></i><div><strong>{tournament.venue || "Venue to be announced"}</strong><span>{tournament.location || "Location to be announced"}</span></div></div>
+          <div className="detail"><i data-lucide="users"></i><div><strong>Foursomes</strong><span>{tournament.foursomePrice || "Price to be announced"}</span></div></div>
+          <div className="detail"><i data-lucide="flag"></i><div><strong>Sponsor a hole</strong><span>{tournament.holeSponsorPrice || "Details to be announced"}</span></div></div>
         </div>
       </section>
 
       <section className="register">
         <div className="register__copy">
-          <h2>Register your foursome.</h2>
-          <p>All proceeds go directly to the Zach Matla Memorial Scholarship. Neon tutus optional but enthusiastically encouraged.</p>
+          <h2>{isCompleted ? "Thank you for showing up." : "Register your foursome."}</h2>
+          <p>{isCompleted ? "The 2026 tournament has been completed. Check back here for next year's date and registration details." : "All proceeds go directly to the Zach Matla Memorial Scholarship."}</p>
         </div>
-        {registered ? (
+        {isCompleted ? (
+          <div className="register__success">
+            <i data-lucide="heart"></i>
+            <h3>See you next year.</h3>
+            <p>Thank you to every golfer, sponsor, donor, and volunteer who supported the foundation.</p>
+          </div>
+        ) : registered ? (
           <div className="register__success">
             <i data-lucide="heart"></i>
             <h3>You're in.</h3>
@@ -55,7 +62,7 @@ function TournamentScreen({ onNav, registered, onRegister, dates = {} }) {
       </section>
 
       <section className="gallery">
-        <span className="eyebrow">Last year, on the green</span>
+        <span className="eyebrow">On the green</span>
         <div className="gallery__grid">
           <img src="public/assets/photos/community-event-1.jpg" alt="" />
           <img src="public/assets/photos/community-event-2.jpg" alt="" />

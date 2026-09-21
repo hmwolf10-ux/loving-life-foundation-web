@@ -66,10 +66,13 @@ belongs in `src/`; do not add another HTML application shell there.
 
 ## Content Configuration
 
-Year-specific event dates and contact information live in `src/content.js`.
-Update that file each year instead of editing page components or HTML. When
-recipient information is added to the site, keep it in the same central content
-configuration rather than scattering it across individual pages.
+All public, year-changing content lives in `src/content.js`: the current
+tournament record, scholarship dates and recipients, donation instructions, and
+contact information. At the end of a year, copy the current record into
+`archive`, add the next year's record, and change its `status` from `upcoming`
+to `completed` after the event. Leave dates or prices blank until they are
+confirmed; the site will display “to be announced” rather than inventing
+details.
 
 ## Design System
 

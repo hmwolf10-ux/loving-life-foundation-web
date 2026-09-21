@@ -1,5 +1,14 @@
 function App() {
-  const dates = window.LLF_CONTENT.dates;
+  const content = window.LLF_CONTENT;
+  const dates = {
+    ...content.tournament,
+    ...content.scholarship,
+    tourneyEdition: content.tournament.edition,
+    tourneyDay: content.tournament.day,
+    tourneyDate: content.tournament.date,
+    tourneyTime: content.tournament.time,
+    schYear: content.scholarship.year
+  };
   const contact = window.LLF_CONTENT.contact;
   const [screen, setScreen] = React.useState(() => localStorage.getItem("llf_screen") || "home");
   const [registered, setRegistered] = React.useState(false);
@@ -22,9 +31,9 @@ function App() {
       <main>
         {screen === "home" && <HomeScreen onNav={onNav} />}
         {screen === "scholarship" && <ScholarshipScreen onNav={onNav} dates={dates} />}
-        {screen === "tournament" && <TournamentScreen onNav={onNav} registered={registered} onRegister={() => setRegistered(true)} dates={dates} />}
+        {screen === "tournament" && <TournamentScreen onNav={onNav} registered={registered} onRegister={() => setRegistered(true)} dates={dates} tournament={content.tournament} />}
         {screen === "story" && <StoryScreen onNav={onNav} />}
-        {screen === "donate" && <DonateScreen onNav={onNav} onDonate={() => setDonated(true)} donated={donated} />}
+        {screen === "donate" && <DonateScreen onNav={onNav} onDonate={() => setDonated(true)} donated={donated} contact={contact} />}
         {screen === "contact" && (
           <div className="page">
             <div style={{ textAlign: "center", padding: "80px 20px" }}>
@@ -34,11 +43,12 @@ function App() {
                 <p className="lead" key={person.name}>{person.name} · {person.phone}</p>
               ))}
               <p className="lead">{contact.location}</p>
+              <p>{contact.mailingAddress}</p>
             </div>
           </div>
         )}
       </main>
-      <SiteFooter onNav={onNav} />
+      <SiteFooter onNav={onNav} currentYear={new Date().getFullYear()} />
     </div>
   );
 }

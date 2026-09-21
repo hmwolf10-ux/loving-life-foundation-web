@@ -21,6 +21,7 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg1); fo
 .btn--donate { font-family: var(--font-condensed); font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; background: var(--ll-orange); color: #fff; font-size: 13px; padding: 11px 20px; }
 .btn--donate:hover { background: var(--ll-orange-warm); }
 .btn:active { transform: scale(0.97); }
+.btn:disabled { cursor: not-allowed; opacity: 0.55; transform: none; }
 .eyebrow { font-family: var(--font-condensed); font-weight: 500; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ll-orange); display: inline-block; margin-bottom: 10px; }
 h1, h2, h3, h4 { color: var(--ll-navy); margin: 0 0 10px; }
 h1 { font-family: var(--font-display); font-size: 48px; font-weight: 600; line-height: 1.05; letter-spacing: -0.02em; }

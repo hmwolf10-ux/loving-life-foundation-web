@@ -4,6 +4,7 @@ function ScholarshipScreen({ onNav, dates = {} }) {
   const notified = dates.notified || "May 20";
   const presented = dates.presented || "Jun 6";
   const schYear = dates.schYear || "2026";
+  const applicationsClosed = dates.status === "closed";
   return (
     <div className="page">
       <section className="page-hero">
@@ -30,22 +31,24 @@ function ScholarshipScreen({ onNav, dates = {} }) {
             <li><span className="date">{notified}</span> Recipients notified</li>
             <li><span className="date">{presented}</span> Presented at the golf tournament</li>
           </ul>
-          <button className="btn btn--accent" onClick={() => onNav("apply")}>Apply now</button>
-          <button className="btn btn--link">Nominate a student →</button>
+          <button className="btn btn--accent" disabled={applicationsClosed} onClick={() => onNav("apply")}>
+            {applicationsClosed ? "Applications closed" : "Apply now"}
+          </button>
+          <button className="btn btn--link" disabled={applicationsClosed}>Nominate a student →</button>
         </aside>
       </section>
 
       <section className="recipients">
         <div className="section-head">
-          <span className="eyebrow">Past recipients</span>
-          <h2>Kids Zach would have loved.</h2>
+          <span className="eyebrow">2026 recipients</span>
+          <h2>Students carrying Zach's spirit forward.</h2>
         </div>
         <div className="recipients__grid">
-          {["2026 · Josh Pfeiffer", "2026 · Vincent Vaillancourt"].map((r) => (
+          {[["2026 · Vincent Vaillancourt", "Vincent Vaillancourt"], ["2026 · Joshua Pfeiffer", "Joshua Pfeiffer"]].map(([r, name]) => (
             <div key={r} className="recipient-card">
               <div className="recipient-card__thumb"><i data-lucide="graduation-cap"></i></div>
               <div className="recipient-card__meta">{r}</div>
-              <div className="recipient-card__quote">"This scholarship let me say yes to college."</div>
+              <div className="recipient-card__quote">{name} · $1,500 scholarship recipient</div>
             </div>
           ))}
         </div>

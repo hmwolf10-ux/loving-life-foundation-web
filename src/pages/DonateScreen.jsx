@@ -1,4 +1,4 @@
-function DonateScreen({ onNav, onDonate, donated }) {
+function DonateScreen({ onNav, onDonate, donated, contact = {} }) {
   const [amount, setAmount] = React.useState(100);
   const [custom, setCustom] = React.useState("");
   const [note, setNote] = React.useState("");
@@ -23,6 +23,8 @@ function DonateScreen({ onNav, onDonate, donated }) {
         <h1>Keep the light on.</h1>
         <p className="lead">100% of gifts support the Memorial Scholarship. The Loving Life Foundation is a registered 501(c)(3); your donation is tax-deductible.</p>
         <blockquote>"Every swing supports a kid headed to college."</blockquote>
+        <p><strong>Donate by Venmo:</strong> {contact.venmo || "@MarcMatla"}<br />
+          <strong>Or mail a check:</strong> {contact.mailingAddress || "41 Hidden Valley Drive, Elma, NY 14059"}</p>
       </div>
 
       <form className="donate__form" onSubmit={(e) => { e.preventDefault(); onDonate(); }}>

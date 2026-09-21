@@ -1,5 +1,5 @@
 # Simple HTTP Server for the website
-$port = 3000
+$port = if ($env:LLF_PORT) { [int]$env:LLF_PORT } else { 3000 }
 $sourceDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 
 $listener = New-Object System.Net.HttpListener
