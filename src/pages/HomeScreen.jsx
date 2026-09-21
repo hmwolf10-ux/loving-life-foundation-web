@@ -22,9 +22,9 @@ function HomeScreen({ onNav }) {
 
       <section className="stats">
         <div className="stat"><div className="stat__num">8</div><div className="stat__label">Years of giving</div></div>
-        <div className="stat"><div className="stat__num">about $40k</div><div className="stat__label">Raised for scholarships</div></div>
+        <div className="stat"><div className="stat__num">$40.5k</div><div className="stat__label">Awarded in scholarships</div></div>
         <div className="stat"><div className="stat__num">27</div><div className="stat__label">Scholarships awarded</div></div>
-        <div className="stat"><div className="stat__num">1</div><div className="stat__label">Tagline that started it all</div></div>
+        <div className="stat"><div className="stat__num">6</div><div className="stat__label">Golf tournaments hosted</div></div>
       </section>
 
       <section className="programs">
