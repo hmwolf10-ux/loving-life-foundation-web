@@ -29,8 +29,8 @@ function SiteHeader({ current = "home", onNav }) {
         <ZMark size={38} />
         <div style={{ width: 1, height: 32, background: "rgba(26,42,73,0.15)" }} />
         <span style={{ display: "flex", flexDirection: "column", lineHeight: 1 }}>
-          <span style={{ fontFamily: "var(--font-body)", fontWeight: 700, fontSize: 17, textTransform: "uppercase", letterSpacing: "0.01em", color: "#1a2a49", lineHeight: 1 }}>Loving Life</span>
-          <span style={{ fontFamily: "var(--font-body)", fontWeight: 500, fontSize: 10, letterSpacing: "0.28em", textTransform: "uppercase", color: "#1a2a49", opacity: 0.55, marginTop: 6, lineHeight: 1 }}>Foundation</span>
+          <span style={{ fontFamily: "var(--font-condensed)", fontWeight: 700, fontSize: 17, textTransform: "uppercase", letterSpacing: "0.01em", color: "#1a2a49", lineHeight: 1 }}>Loving Life</span>
+          <span style={{ fontFamily: "var(--font-condensed)", fontWeight: 400, fontSize: 10, letterSpacing: "0.28em", textTransform: "uppercase", color: "#1a2a49", opacity: 0.55, marginTop: 6, lineHeight: 1 }}>Foundation</span>
         </span>
       </a>
       <button className="mobile-menu-toggle" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Toggle menu">
