@@ -4,6 +4,7 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg1); fo
 .app { min-height: 100vh; display: flex; flex-direction: column; }
 .site-header { display: flex; align-items: center; justify-content: space-between; padding: 18px 40px; background: #fff; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 10; }
 .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
+.site-header__logo { width: 58px; height: 58px; object-fit: contain; display: block; }
 .mobile-menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; color: var(--ll-navy); }
 .site-nav { display: flex; align-items: center; gap: 8px; }
 .site-nav__link { font-family: var(--font-body); font-weight: 500; font-size: 14px; color: var(--fg2); text-decoration: none; padding: 8px 12px; border-radius: 6px; transition: color .15s, background .15s; }
@@ -124,7 +125,7 @@ main { flex: 1; max-width: var(--container-xl); margin: 0 auto; padding: 36px 32
 .site-footer { background: var(--ll-navy); color: rgba(255,255,255,0.75); padding: 36px 32px 24px; margin-top: 56px; }
 .site-footer__main { max-width: var(--container-xl); margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 32px; padding-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,0.1); }
 .site-footer__brand { display: flex; gap: 14px; align-items: flex-start; }
-.site-footer__logo { width: 56px; filter: invert(1); opacity: 0.9; }
+.site-footer__logo { width: 56px; filter: brightness(0) invert(1); opacity: 0.9; }
 .site-footer__tag em { display: block; font-weight: 600; font-style: italic; color: #fff; font-size: 18px; margin-bottom: 4px; }
 .site-footer__tag span { font-family: var(--font-condensed); text-transform: uppercase; letter-spacing: 0.2em; font-size: 11px; }
 .site-footer__social { display: flex; gap: 10px; margin-top: 14px; }
