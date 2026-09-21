@@ -29,6 +29,20 @@ window.LLF_CONTENT = {
       { name: "Joshua Pfeiffer", year: 2026 }
     ]
   },
+  donors: [
+    "Chris and Margaret Martello",
+    "Jarrod Randle",
+    "Fran Gibney",
+    "Clay Lewis",
+    "Beverly Gaglio",
+    "Karen Molenda",
+    "Sue Valentino",
+    "Lorraine Kuhn",
+    "Mike and Donna Duszynski",
+    "Joanne Wojtkiewicz",
+    "Carol Matla",
+    "Jennifer Derrick"
+  ],
   archive: [
     {
       year: 2026,

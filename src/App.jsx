@@ -33,6 +33,7 @@ function App() {
         {screen === "scholarship" && <ScholarshipScreen onNav={onNav} dates={dates} />}
         {screen === "tournament" && <TournamentScreen onNav={onNav} registered={registered} onRegister={() => setRegistered(true)} dates={dates} tournament={content.tournament} />}
         {screen === "story" && <StoryScreen onNav={onNav} />}
+        {screen === "donors" && <DonorsScreen donors={content.donors} />}
         {screen === "donate" && <DonateScreen onNav={onNav} onDonate={() => setDonated(true)} donated={donated} contact={contact} />}
         {screen === "contact" && (
           <div className="page">

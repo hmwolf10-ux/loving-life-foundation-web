@@ -5,6 +5,7 @@ function SiteHeader({ current = "home", onNav }) {
     { id: "scholarship", label: "Scholarship" },
     { id: "tournament", label: "Golf Tournament" },
     { id: "story", label: "Zach's Story" },
+    { id: "donors", label: "Donors" },
     { id: "contact", label: "Contact" },
   ];
 
