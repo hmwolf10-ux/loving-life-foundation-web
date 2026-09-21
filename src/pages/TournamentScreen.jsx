@@ -63,11 +63,21 @@ function TournamentScreen({ onNav, registered, onRegister, dates = {}, tournamen
 
       <section className="gallery">
         <span className="eyebrow">On the green</span>
+        <h2>Tournament highlights</h2>
+        <p className="gallery__intro">A few favorite moments from the Loving Life Foundation tournament over the years.</p>
         <div className="gallery__grid">
           <img src="public/assets/photos/golf-tournament-1.jpg" alt="Golf tournament guests on the course" />
           <img src="public/assets/photos/golf-tournament-2.jpg" alt="Golfers gathered beside a golf cart" />
           <img src="public/assets/photos/golf-tournament-3.jpg" alt="Golf tournament teams gathered on the green" />
           <img src="public/assets/photos/golf-tournament-4.jpg" alt="Foundation supporters enjoying the tournament" />
+          <img src="public/assets/photos/golf-tournament-5.jpg" alt="Tournament supporters posing together" />
+          <img src="public/assets/photos/golf-tournament-6.jpg" alt="Golfers celebrating at the tournament" />
+          <img src="public/assets/photos/golf-tournament-7.jpg" alt="Friends gathered during the golf tournament" />
+          <img src="public/assets/photos/golf-tournament-8.jpg" alt="Players enjoying a day on the course" />
+          <img src="public/assets/photos/golf-tournament-9.jpg" alt="Tournament guests gathered outdoors" />
+          <img src="public/assets/photos/golf-tournament-10.jpg" alt="Golf tournament group photo" />
+          <img src="public/assets/photos/golf-tournament-11.jpg" alt="Supporters sharing a moment on the course" />
+          <img src="public/assets/photos/golf-tournament-12.jpg" alt="Friends and golfers at the Loving Life tournament" />
         </div>
       </section>
     </div>
