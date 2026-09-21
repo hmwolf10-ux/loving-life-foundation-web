@@ -136,7 +136,7 @@ main { flex: 1; max-width: var(--container-xl); margin: 0 auto; padding: 36px 32
 .site-footer { background: var(--ll-navy); color: rgba(255,255,255,0.75); padding: 36px 32px 24px; margin-top: 56px; }
 .site-footer__main { max-width: var(--container-xl); margin: 0 auto; display: grid; grid-template-columns: 1fr 2fr; gap: 32px; padding-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,0.1); }
 .site-footer__brand { display: flex; gap: 14px; align-items: flex-start; }
-.site-footer__logo { width: 56px; height: 56px; object-fit: contain; opacity: 0.95; }
+.site-footer__logo { width: 56px; height: 56px; object-fit: contain; background: #fff; border-radius: 50%; opacity: 0.95; }
 .site-footer__tag em { display: block; font-weight: 600; font-style: italic; color: #fff; font-size: 18px; margin-bottom: 4px; }
 .site-footer__tag span { font-family: var(--font-condensed); text-transform: uppercase; letter-spacing: 0.2em; font-size: 11px; }
 .site-footer__social { display: flex; gap: 10px; margin-top: 14px; }
