@@ -7,6 +7,7 @@ function TournamentScreen({ onNav, registered, onRegister, dates = {}, tournamen
   const tourneyDay = dates.tourneyDay || "Date to be announced";
   const tourneyTime = dates.tourneyTime || "Time to be announced";
   const isCompleted = tournament.status === "completed";
+  const galleryYears = window.LLF_CONTENT.tournamentGallery || [];
 
   return (
     <div className="page">
@@ -64,21 +65,28 @@ function TournamentScreen({ onNav, registered, onRegister, dates = {}, tournamen
       <section className="gallery">
         <span className="eyebrow">On the green</span>
         <h2>Tournament highlights</h2>
-        <p className="gallery__intro">A few favorite moments from the Loving Life Foundation tournament over the years.</p>
-        <div className="gallery__grid">
-          <img src="public/assets/photos/golf-tournament-1.jpg" alt="Golf tournament guests on the course" />
-          <img src="public/assets/photos/golf-tournament-2.jpg" alt="Golfers gathered beside a golf cart" />
-          <img src="public/assets/photos/golf-tournament-3.jpg" alt="Golf tournament teams gathered on the green" />
-          <img src="public/assets/photos/golf-tournament-4.jpg" alt="Foundation supporters enjoying the tournament" />
-          <img src="public/assets/photos/golf-tournament-5.jpg" alt="Tournament supporters posing together" />
-          <img src="public/assets/photos/golf-tournament-6.jpg" alt="Golfers celebrating at the tournament" />
-          <img src="public/assets/photos/golf-tournament-7.jpg" alt="Friends gathered during the golf tournament" />
-          <img src="public/assets/photos/golf-tournament-8.jpg" alt="Players enjoying a day on the course" />
-          <img src="public/assets/photos/golf-tournament-9.jpg" alt="Tournament guests gathered outdoors" />
-          <img src="public/assets/photos/golf-tournament-10.jpg" alt="Golf tournament group photo" />
-          <img src="public/assets/photos/golf-tournament-11.jpg" alt="Supporters sharing a moment on the course" />
-          <img src="public/assets/photos/golf-tournament-12.jpg" alt="Friends and golfers at the Loving Life tournament" />
-        </div>
+        <p className="gallery__intro">Browse the people, teams, families, and friends who have filled the course each year. Every gallery stays with its own tournament year.</p>
+        {galleryYears.map(({ year, photos }) => (
+          <div className="gallery__year" key={year}>
+            <div className="gallery__year-head">
+              <h3>{year}</h3>
+              <span>{photos} moments</span>
+            </div>
+            <div className="gallery__grid">
+              {Array.from({ length: photos }, (_, index) => {
+                const number = String(index + 1).padStart(2, "0");
+                return (
+                  <img
+                    key={`${year}-${number}`}
+                    src={`public/assets/photos/tournaments/tournament-${year}-${number}.jpg`}
+                    alt={`Loving Life Foundation tournament guests and supporters in ${year}`}
+                    loading="lazy"
+                  />
+                );
+              })}
+            </div>
+          </div>
+        ))}
       </section>
     </div>
   );

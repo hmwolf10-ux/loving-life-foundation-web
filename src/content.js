@@ -36,6 +36,13 @@ window.LLF_CONTENT = {
       recipients: ["Vincent Vaillancourt", "Joshua Pfeiffer"]
     }
   ],
+  tournamentGallery: [
+    { year: 2026, photos: 24 },
+    { year: 2023, photos: 24 },
+    { year: 2021, photos: 24 },
+    { year: 2019, photos: 24 },
+    { year: 2018, photos: 17 }
+  ],
   contact: {
     location: "Elma, NY",
     mailingAddress: "41 Hidden Valley Drive, Elma, NY 14059",

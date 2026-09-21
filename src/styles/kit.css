@@ -97,6 +97,10 @@ main { flex: 1; max-width: var(--container-xl); margin: 0 auto; padding: 36px 32
 .register__success p { color: rgba(255,255,255,0.8); }
 .gallery h2 { margin-bottom: 6px; }
 .gallery__intro { max-width: 58ch; margin-bottom: 0; }
+.gallery__year { margin-top: 32px; }
+.gallery__year-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+.gallery__year-head h3 { margin: 0; color: var(--ll-navy); }
+.gallery__year-head span { color: var(--fg2); font-size: 12px; text-transform: uppercase; letter-spacing: .12em; }
 .gallery__grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin-top: 16px; }
 .gallery__grid img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 10px; transition: transform .3s var(--ease-out); }
 .gallery__grid img:hover { transform: scale(1.03); }
