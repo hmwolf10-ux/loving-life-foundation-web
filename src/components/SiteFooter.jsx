@@ -1,5 +1,5 @@
 function SiteFooter({ onNav, currentYear }) {
-  const nav = (id) => (e) => { e.preventDefault(); onNav && onNav(id); };
+  const nav = (id) => () => { onNav && onNav(id); };
   return (
     <footer className="site-footer">
       <div className="site-footer__main">
@@ -8,7 +8,7 @@ function SiteFooter({ onNav, currentYear }) {
           <div className="site-footer__tag">
             <em>"Life is what you make it."</em>
             <span>— Zach Matla</span>
-            <div className="site-footer__social" aria-label="Follow the Loving Life Foundation">
+            <div className="site-footer__social">
               <a href="https://www.facebook.com/thezachmatlafoundation" target="_blank" rel="noopener noreferrer" aria-label="Follow The Zach Matla Foundation on Facebook">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-3.3 0-5 1.9-5 5v3H6v4h3v4h4v-4h3l1-4h-4V9c0-.7.3-1 1-1Z" fill="currentColor" /></svg>
               </a>
@@ -20,26 +20,26 @@ function SiteFooter({ onNav, currentYear }) {
         </div>
         <div className="site-footer__cols">
           <div>
-            <h5>Foundation</h5>
-            <a href="#" onClick={nav("story")}>Our mission</a>
-            <a href="#" onClick={nav("story")}>Board &amp; family</a>
+            <h2 className="site-footer__h">Foundation</h2>
+            <button type="button" onClick={nav("story")}>Our mission</button>
+            <button type="button" onClick={nav("story")}>Board &amp; family</button>
           </div>
           <div>
-            <h5>Programs</h5>
-            <a href="#" onClick={nav("scholarship")}>Memorial Scholarship</a>
-            <a href="#" onClick={nav("tournament")}>Golf Tournament</a>
-            <a href="#" onClick={nav("home")}>Community events</a>
+            <h2 className="site-footer__h">Programs</h2>
+            <button type="button" onClick={nav("scholarship")}>Memorial Scholarship</button>
+            <button type="button" onClick={nav("tournament")}>Golf Tournament</button>
+            <button type="button" onClick={nav("home")}>Community events</button>
           </div>
           <div>
-            <h5>Get involved</h5>
-            <a href="#" onClick={nav("donate")}>Donate</a>
-            <a href="#" onClick={nav("tournament")}>Sponsor a hole</a>
+            <h2 className="site-footer__h">Get involved</h2>
+            <button type="button" onClick={nav("donate")}>Donate</button>
+            <button type="button" onClick={nav("tournament")}>Sponsor a hole</button>
           </div>
         </div>
       </div>
       <div className="site-footer__legal">
         <span>© {currentYear} The Loving Life Foundation of Zach Matla · Elma, NY</span>
-        <span>501(c)(3) nonprofit</span>
+        <span><button type="button" onClick={nav("accessibility")}>Accessibility</button> · 501(c)(3) nonprofit</span>
       </div>
     </footer>
   );

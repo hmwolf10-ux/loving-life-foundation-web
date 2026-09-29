@@ -1,10 +1,10 @@
 :root{
 /* ---------- BRAND COLORS ---------- */
 --ll-navy:#1a2a49;--ll-navy-deep:#0f1a2f;--ll-black:#111111;--ll-ink:#1b1b1b;
---ll-orange:#F26B1F;--ll-orange-warm:#E85D12;
+--ll-orange:#C2410C;--ll-orange-warm:#9A3412;
 --ll-green:#5DD90A;--ll-green-grass:#3E8E41;--ll-sky:#2FA7E0;
 --ll-cream:#F7F2E8;--ll-paper:#FBF8F1;--ll-sand:#EFE7D4;
---ll-stone-50:#F5F4F1;--ll-stone-100:#EBE8E1;--ll-stone-200:#D8D3C7;--ll-stone-300:#B8B1A1;--ll-stone-500:#7A7566;--ll-stone-700:#3E3A30;
+--ll-stone-50:#F5F4F1;--ll-stone-100:#EBE8E1;--ll-stone-200:#D8D3C7;--ll-stone-300:#B8B1A1;--ll-stone-500:#66614F;--ll-stone-700:#3E3A30;
 /* ---------- SEMANTIC ---------- */
 --bg:var(--ll-paper);--bg-alt:var(--ll-cream);--bg-inverse:var(--ll-navy);
 --surface:#ffffff;--surface-raised:#ffffff;

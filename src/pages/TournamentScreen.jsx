@@ -1,6 +1,7 @@
 function TournamentScreen({ onNav, registered, onRegister, dates = {}, tournament = {} }) {
   const [foursome, setFoursome] = React.useState("");
   const [email, setEmail] = React.useState("");
+  const [notice, setNotice] = React.useState(false);
 
   const edition = dates.tourneyEdition || "Annual";
   const tourneyDate = dates.tourneyDate || "Date to be announced";
@@ -23,10 +24,10 @@ function TournamentScreen({ onNav, registered, onRegister, dates = {}, tournamen
         </div>
 
         <div className="tourney-details">
-          <div className="detail"><i data-lucide="calendar"></i><div><strong>{tourneyDate}</strong><span>Shotgun · {tourneyTime}</span></div></div>
-          <div className="detail"><i data-lucide="map-pin"></i><div><strong>{tournament.venue || "Venue to be announced"}</strong><span>{tournament.location || "Location to be announced"}</span></div></div>
-          <div className="detail"><i data-lucide="users"></i><div><strong>Foursomes</strong><span>{tournament.foursomePrice || "Price to be announced"}</span></div></div>
-          <div className="detail"><i data-lucide="flag"></i><div><strong>Sponsor a hole</strong><span>{tournament.holeSponsorPrice || "Details to be announced"}</span></div></div>
+          <div className="detail"><i aria-hidden="true" data-lucide="calendar"></i><div><strong>{tourneyDate}</strong><span>Shotgun · {tourneyTime}</span></div></div>
+          <div className="detail"><i aria-hidden="true" data-lucide="map-pin"></i><div><strong>{tournament.venue || "Venue to be announced"}</strong><span>{tournament.location || "Location to be announced"}</span></div></div>
+          <div className="detail"><i aria-hidden="true" data-lucide="users"></i><div><strong>Foursomes</strong><span>{tournament.foursomePrice || "Price to be announced"}</span></div></div>
+          <div className="detail"><i aria-hidden="true" data-lucide="flag"></i><div><strong>Sponsor a hole</strong><span>{tournament.holeSponsorPrice || "Details to be announced"}</span></div></div>
         </div>
       </section>
 
@@ -36,28 +37,29 @@ function TournamentScreen({ onNav, registered, onRegister, dates = {}, tournamen
           <p>{isCompleted ? "The 2026 tournament has been completed. Check back here for next year's date and registration details." : "All proceeds go directly to the Zach Matla Memorial Scholarship."}</p>
         </div>
         {isCompleted ? (
-          <div className="register__success">
-            <i data-lucide="heart"></i>
+          <div className="register__success" role="status">
+            <i aria-hidden="true" data-lucide="heart"></i>
             <h3>See you next year.</h3>
             <p>Thank you to every golfer, sponsor, donor, and volunteer who supported the foundation.</p>
           </div>
         ) : registered ? (
-          <div className="register__success">
-            <i data-lucide="heart"></i>
+          <div className="register__success" role="status">
+            <i aria-hidden="true" data-lucide="heart"></i>
             <h3>You're in.</h3>
             <p>We'll see you on the green, {foursome || "friend"}. Check <strong>{email || "your inbox"}</strong> for the details.</p>
           </div>
         ) : (
-          <form className="register__form" onSubmit={(e) => { e.preventDefault(); onRegister(); }}>
+          <form className="register__form" onSubmit={(e) => { e.preventDefault(); setNotice(true); }}>
             <div>
-              <label>Foursome captain</label>
-              <input className="field" value={foursome} onChange={(e) => setFoursome(e.target.value)} placeholder="Your name" required />
+              <label htmlFor="reg-name">Foursome captain</label>
+              <input id="reg-name" autoComplete="name" className="field" value={foursome} onChange={(e) => setFoursome(e.target.value)} placeholder="Your name" required />
             </div>
             <div>
-              <label>Email</label>
-              <input className="field" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@elma.org" required />
+              <label htmlFor="reg-email">Email</label>
+              <input id="reg-email" autoComplete="email" className="field" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="you@elma.org" required />
             </div>
             <button className="btn btn--donate" type="submit">Register foursome</button>
+            <p role="status" style={{ color: "rgba(255,255,255,0.85)", margin: 0, fontSize: 14 }}>{notice ? "Online registration is not open yet, and nothing was submitted. To register, please call Angela Terhart at (716) 983-2392 or Marc Matla at (716) 818-0282." : ""}</p>
           </form>
         )}
       </section>

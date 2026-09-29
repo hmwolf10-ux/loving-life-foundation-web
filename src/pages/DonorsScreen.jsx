@@ -8,7 +8,7 @@ function DonorsScreen({ donors = [] }) {
           <p className="lead">Every gift helps keep Zach's spirit of love and possibility moving forward.</p>
         </div>
         <div className="donors__heart" aria-hidden="true">
-          <i data-lucide="heart"></i>
+          <i aria-hidden="true" data-lucide="heart"></i>
         </div>
       </section>
 

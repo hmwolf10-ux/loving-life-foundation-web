@@ -39,7 +39,7 @@ function HomeScreen({ onNav }) {
               <span className="eyebrow">Scholarship</span>
               <h3>Zach Matla Memorial Scholarship</h3>
               <p>Awarded each spring to an Iroquois Central senior who embodies Zach's belief that kindness leaves a longer mark than anything.</p>
-              <span className="link-arrow">Apply or nominate →</span>
+              <button type="button" className="link-arrow" onClick={(e) => { e.stopPropagation(); onNav("scholarship"); }}>Apply or nominate →</button>
             </div>
           </article>
           <article className="program-card" onClick={() => onNav("tournament")}>
@@ -48,7 +48,7 @@ function HomeScreen({ onNav }) {
               <span className="eyebrow">Fundraiser</span>
               <h3>The Loving Life Golf Tournament</h3>
               <p>Our biggest day of the year. Grab your clubs, grab your friends, and do it for Zach.</p>
-              <span className="link-arrow">Register a foursome →</span>
+              <button type="button" className="link-arrow" onClick={(e) => { e.stopPropagation(); onNav("tournament"); }}>Register a foursome →</button>
             </div>
           </article>
           <article className="program-card" onClick={() => onNav("story")}>
@@ -57,7 +57,7 @@ function HomeScreen({ onNav }) {
               <span className="eyebrow">Community</span>
               <h3>Events &amp; stories</h3>
               <p>From neon-green tutus on the green to quiet gatherings at the school — here's where we show up.</p>
-              <span className="link-arrow">See what's next →</span>
+              <button type="button" className="link-arrow" onClick={(e) => { e.stopPropagation(); onNav("story"); }}>See what's next →</button>
             </div>
           </article>
         </div>

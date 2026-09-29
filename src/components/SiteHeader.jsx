@@ -16,19 +16,19 @@ function SiteHeader({ current = "home", onNav }) {
 
   return (
     <header className="site-header">
-      <a className="brand" href="#" onClick={(e) => { e.preventDefault(); handleNavClick("home"); }}>
-        <img src="public/assets/logos/navy.png" alt="The Loving Life Foundation of Zach Matla" className="site-header__logo" />
+      <a className="brand" href="#home" aria-label="The Loving Life Foundation, home" onClick={(e) => { e.preventDefault(); handleNavClick("home"); }}>
+        <img src="public/assets/logos/navy.png" alt="" className="site-header__logo" />
       </a>
-      <button className="mobile-menu-toggle" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Toggle menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <button className="mobile-menu-toggle" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Menu" aria-expanded={mobileOpen} aria-controls="site-nav">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
           <line x1="3" y1="6" x2="21" y2="6" />
           <line x1="3" y1="12" x2="21" y2="12" />
           <line x1="3" y1="18" x2="21" y2="18" />
         </svg>
       </button>
-      <nav className={"site-nav" + (mobileOpen ? " is-open" : "")}>
+      <nav id="site-nav" aria-label="Main" className={"site-nav" + (mobileOpen ? " is-open" : "")}>
         {links.map((l) => (
-          <a key={l.id} href="#" className={"site-nav__link" + (current === l.id ? " is-active" : "")} onClick={(e) => { e.preventDefault(); handleNavClick(l.id); }}>
+          <a key={l.id} href={"#" + l.id} aria-current={current === l.id ? "page" : undefined} className={"site-nav__link" + (current === l.id ? " is-active" : "")} onClick={(e) => { e.preventDefault(); handleNavClick(l.id); }}>
             {l.label}
           </a>
         ))}
